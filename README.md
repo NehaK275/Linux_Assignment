@@ -19,11 +19,17 @@ UEFI is the short form of Unified Extensible Firmware Interface. In simple words
 
 Security benefits of UEFI:
 •	Device guard
+
 •	Credential guard
+
 •	Biometric authentication
+
 •	Faster start-up times
+
 •	Faster shutdown times
+
 •	Faster sleep times
+
 •	Faster resuming times
 
 ### 5.What is the difference between BIOS & UEFI?
@@ -49,6 +55,7 @@ Fedora: It is a community-based project by Redhat. It uses dnf package manager.
 A unit configuration file whose name ends in “. service" encodes information about a process controlled and supervised by systemd. systemd.exec(5) define the execution environment the commands are executed in, and in systemd.kill(5), which define the way the processes of the service are terminated, and in systemd.resource-control(5), which configure resource control settings for the processes of the service.
 ### 9.What are Getty commands and Uname command?
 Getty command: the Getty command set and manages terminal lines and ports. This command is run by the init command.
+
 Uname command: the uname command is commonly used to determine the process architecture, the system hostname and the version of the kernel running on the system.
 
 ### 10.What is squashfs file system?
@@ -57,6 +64,7 @@ squashfs file system is a read only file system that lets us compress whole file
 ### 11.What are /dev/loop and /dev/tty?
 The “/dev/loop” devices treat files with a filesystem image as if they were block devices. The loop devices are snaps because snap packages are created that way.
 These files were containing a filesystem that is mounted to the location. It is an approach that developers use to pack an entire package in a single file, but the operating system access all the files. The approach used here is therefore known as loop mounts.
+
 /dev/tty stands for the controlling terminal (if any) for the current process. To find out which tty's are attached to which processes we use the "ps -a" command at the shell prompt (command line).
 
 ### 12.What are Linux Signals?
@@ -70,6 +78,7 @@ ext4 file system is faster among all the ext. file system. The ext4 filesystem i
 
 ### 15.What is swap & swap memory?
 Swap is a space on a disk that is used when the amount of physical RAM memory is full. When a Linux system runs out of RAM, inactive pages are moved from the RAM to the swap space.
+
 swap memory is the dedicated amount of hard drive that is used whenever RAM runs out of memory. There is a memory management program in Linux that takes care of this process. Whenever RAM is short of memory, the memory management program looks for all those inactive blocks of data present in RAM that have not been used for a long time.
 
 ### 16.How to mount a file system?
@@ -93,6 +102,7 @@ control group allow to relocate the resources such as CPU time, system memory, n
 
 ### 21.What is the difference between sbin & usr/sbin?
 /sbin, as distinct from /bin, is for system management programs (not normally used by ordinary users) needed before /usr is mounted.
+
 /usr/sbin is a subdirectory of /usr, which is used to store many application programs. Another subdirectory of /usr, /usr/bin, contains programs that are not required for booting or repairing the system. The directory /usr/local/sbin is used for locally installed system administration programs.
 
 ### 22.Examples of awk, grep and sed
@@ -132,15 +142,22 @@ $ sed -n 22,29p testfile.txt.
 ### 23.How many tables are there in iptables?
 There are 5 tables in iptables:
 •	Filter: It works as the bouncer and determine who gets out and in of our network.
+
 •	Nat: it stands for Network Address Translation. It includes rules of NAT to route packet to the network that cannot be directly accessible. If the source or destination of a packet has to be modified then NAT table will be used.
+
 •	Mangle: this table is used for adjusting the packet’s IP header properties. It contains following chain Forward, input, output, past-routing, pre-routing.
+
 •	Raw: this table is used for exempting packets through connection tracking. It contains two chains: pre-routing and output.
+
 •	Security: It is used for managing unique access rule.It contains forward, input and output chains.
 
 ### 24.What is prot, opt, in, out, source & destination?
 prot: Protocol, tcp, udp, icmp etc.
+
 opt: special options for the specific rule.
+
 Source: source ip-address of the packet.
+
 Destination: destination ip-address for the packet.
 
 ### 25.Why rules are added to the top?
@@ -148,9 +165,13 @@ To insert a new rule above a specific existing rule, we simply use the index num
 
 ### 26.What type of rules we can add to the iptables?
 Open the terminal app or login using ssh: ssh user@server-name.
+
 •	To list all IPv4 rules : sudo iptables -S.
+
 •	To list all IPv6 rules : sudo ip6tables -S.
+
 •	To list all tables rules : sudo iptables -L -v -n | more.
+
 •	To list all rules for INPUT tables : sudo iptables -L INPUT -v -n.
 
 ### 27.Can we block a website by its domain name only?
@@ -164,16 +185,15 @@ we can save rules in iptables by using the command iptables-save, which writes t
 $ iptables-s save >/etc/network/iptables.rules
 
 ### 30.What is the difference between ufw & iptables?
-ufw: 
-It is a frontend for iptables and is particularly well-suited for host-based firewall.
-It provides a framework for managing net filter as well as a command line interface for manipulating the firewall.
 
-Iptables:
-Iptables is a frontend tool to talk to the kernel and decides the packets to filter.
-Iptables is a tool for managing firewall rule on a Linux machine.
-
+| ufw | iptables |
+|--------------------------------- | -------------------------------- |
+|It is a frontend for iptables and is particularly well-suited for host-based firewall. |Iptables is a frontend tool to talk to the kernel and decides the packets to filter.|
+|It provides a framework for managing net filter as well as a command line interface for manipulating the firewall.| Iptables is a tool for managing firewall rule on a Linux machine. |
+ 
 ### 31.What are public & private keys?
 In public key, two keys are used. One key is used for encryption and another key is used for decryption.
+
 In private key, same key is used for encryption and decryption.
 
 ### 32.How does ssh work?
@@ -206,12 +226,16 @@ The number we mentioned is the number of hard links to a file. It always at leas
 
 ### 39.What is the difference between apt and apt-get?
 Apt is a command line utility for installing, updating, and removing deb package.
+
 Apt-get is a cli package manager tool i.e., widely used on Debian based system. It allows us to install, update and remove package.
 
 ### 40.How can I give access to someone to my AWS instance?
 Add a new user to the EC2 Linux instance
+
 1.	Connect to your Linux instance using SSH.
-2.	Use the add user command to add a new user account to an EC2 instance (replace new_user with the new account name). ...
+
+2.	Use the add user command to add a new user account to an EC2 instance (replace new_user with the new account name). 
+
 3.	Change the security context to the new_user account so that folders and files you create have the correct permissions:
 
 ### 41.What are daemon applications?
