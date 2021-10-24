@@ -18,6 +18,7 @@ Firmware other than BIOS is UEFI. It is a successor of BIOS. UEFI is designed to
 UEFI is the short form of Unified Extensible Firmware Interface. In simple words we can say that it is a successor of BIOS. UEFI is designed to boot the system instead of BIOS. UEFI store all the info in a .efi file. The file is stored in another partition called EFI partition along with the bootloader. It comes with many improvements than BIOS but Linux is still using BIOS.
 
 Security benefits of UEFI:
+
 •	Device guard
 
 •	Credential guard
