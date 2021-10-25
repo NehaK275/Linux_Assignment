@@ -164,25 +164,31 @@ There are 5 tables in iptables:
 Rules are added to the top of the iptables because it will neglect the rules defined below a particular rule which is defined on the top.
 
 ### 26.What type of rules we can add to the iptables?
-Open the terminal app or login using ssh: ssh user@server-name.
-
-•	To list all IPv4 rules : sudo iptables -S.
-
-•	To list all IPv6 rules : sudo ip6tables -S.
-
-•	To list all tables rules : sudo iptables -L -v -n | more.
-
-•	To list all rules for INPUT tables : sudo iptables -L INPUT -v -n.
+we can add different types of rules, e.g. we can block a specific ip address, allowing ssh from a specific network, allow all incoming ssh, allow  incoming HTTP & HTTPs.
 
 ### 27.Can we block a website by its domain name only?
-yes, we can block a website by its domain name only by using $ sudo iptables -A input -i facebook.com -j drop.
+yes, we can block a website by its domain name only but iptables deals with ip addresses only so sometimes these rules doesnot as they should.
+we can block a website by its domain name only,for e.g.
+
+`$ sudo iptables -A input -i facebook.com -j drop`
  
 ### 28.How can we persist rules in iptables?
-We can persist rules in iptables by using command $sudo iptables-A/I/D chain_name-8/d domain/ip -j Action.
+We can persist rules in iptables by using command
+
+`sudo netfilter-persistent save`
+
+or
+
+`sudo iptables-save > /etc/iptables/rules.v4`
 
 ### 29.How can we save rules in iptables?
-we can save rules in iptables by using the command iptables-save, which writes to stdout.
-$ iptables-s save >/etc/network/iptables.rules
+we can save rules in iptables by using the command 
+
+`sudo netfilter-persistent save`
+
+or
+
+`sudo iptables-save > /etc/iptables/rules.v4`
 
 ### 30.What is the difference between ufw & iptables?
 
@@ -213,6 +219,7 @@ Ssh work on a client/server model where the ssh client is the system that requir
 
 ### 35.What is the difference between apt update & apt upgrade.
 `Apt update` is used to update all the package list.
+
 `Apt upgrade` is used to update all the installed software to the latest version.
 
 ### 36.What do repositories contain in a Linux system?
@@ -222,6 +229,7 @@ A Linux repository is a storage location from which your system retrieves and in
 Package manager is a tool that allow users to install, remove, upgrade, configure and manage software package on an operating system.
 
 In Linux, we have two types of package manager.
+
 `Low level package manager` They are only responsible for installing the application and not the dependencies. e.g. dpkg,rpm
 
 `High level package manager` They resolve the dependencies & meta data searching. e.g.apt
