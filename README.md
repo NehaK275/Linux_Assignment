@@ -245,8 +245,7 @@ A daemon (also known as background processes) is a Linux or UNIX program that ru
 "d" stands for directory and such a directory is a collection of configuration files which are often fragments that are included in the main configuration file. 
 
 ### 43.What happens when a .pem file gets deleted?
-.pem file are a type of public key infrastructure file used for key and certificate. They are used to store SSL certificate and their associate private key.
-When a .pem file gets deleted then we won’t be able to connect to your instance because it requires pem file.
+`.pem` file are a type of public key infrastructure file used for key and certificate. They are used to store SSL certificate and their associate private key.When a .pem file gets deleted then we won’t be able to connect to your instance because it requires pem file. But we can gain access again by creating a new instance. We can create a new instance with the same key pair and we can access our AWS instance.
 
 ### 44.What information is stored in the /etc/host file?
 The /etc/hosts file contains the Internet Protocol (IP) host names and addresses for the local host and other hosts in the Internet network. This file is used to resolve a name into an address (that is, to translate a host name into its Internet address).
@@ -257,18 +256,17 @@ SCP stands for secure copy. It is used to copy file between server in a secure w
 ### 46.How port forwarding works?
 Port forwarding is an application of network address translation (NAT) that redirects a communication request from one address and port number combination to another while the packets are traversing a network gateway, such as a router or firewall.
 It is a mechanism in ssh for tunnelling application port from client machine to a server machine or vice-versa.
-Local port-forwarding: connection from ssh client are forwarded through the ssh server to a destination server.
-Remote port-forwarding: connection from ssh server are forwarded through the ssh client to a destination server.
+`Local port-forwarding` connection from ssh client are forwarded through the ssh server to a destination server.
+`Remote port-forwarding` connection from ssh server are forwarded through the ssh client to a destination server.
+
+`ssh -L local_port:destination_server_ip:remote_port ssh_server_hostname`
 
 ### 47.How can we connect without IP to AWS instance?
-we can connect without IP to AWS instance by using following steps:
-1.	In the navigation pane, choose Instances.
-2.	Select your instance, and choose Actions, Networking, Manage IP addresses.
-3.	Expand the network interface. Under IPv6 addresses, choose Assign new IP address.
-4.	Choose Save.
+We will add the public IP of master & slave instances with in host file of local system. Then we can connect with the instances using ssh keyword.
+`ssh -i "AWS-Key-Jenkins.pem: ubuntu@master`
 
 ### 48.What is an ssh agent?
-ssh-agent is a program to hold private keys used for public key authentication. Through use of environment variables the agent can be located and automatically used for authentication when logging in to other machines using ssh(1).
+`ssh-agent` is a key manager of SSH.It is a program to hold private keys used for public key authentication. Through use of environment variables the agent can be located and automatically used for authentication when logging in to other machines using ssh(1).
 
 ### 49.Create a unit file for any application.
 
