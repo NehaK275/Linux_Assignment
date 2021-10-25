@@ -243,13 +243,7 @@ It denotes the number of files contained in that particular directory.
 `Apt-get` is a cli package manager tool i.e., widely used on Debian based system. It allows us to install, update and remove package.
 
 ### 40.How can I give access to someone to my AWS instance?
-Add a new user to the EC2 Linux instance
-
-1.	Connect to your Linux instance using SSH.
-
-2.	Use the add user command to add a new user account to an EC2 instance (replace new_user with the new account name). 
-
-3.	Change the security context to the new_user account so that folders and files you create have the correct permissions:
+Suppose, someone wants to access my AWS instance. So, I will take the public key of that person system and add that public key into the authoried_key file of AWS instance. Then I will give my public IP to the person and he/she can access my AWS instance.
 
 ### 41.What are daemon applications?
 A daemon (also known as background processes) is a Linux or UNIX program that runs in the background. Almost all daemons have names that end with the letter "d". A daemon is a service process that runs in the background and supervises the system or provides functionality to other processes.
