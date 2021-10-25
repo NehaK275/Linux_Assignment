@@ -47,10 +47,10 @@ It is totally depended on our choice that when we go for ubuntu and when for oth
 ### 7.List various Linux distributions & their use cases.
 Linux distribution is a version of the open-source Linux operating system that is packed with other component such as an installation programs, management tools and additional software.
 various Linux distributions are:
-Ubuntu: It works like MacOS and easy to use.
-Linux mint: It works like windows and should be use by new corners
-Debian: It provide stability but not recommended to a new user.
-Fedora: It is a community-based project by Redhat. It uses dnf package manager.
+* `Ubuntu` It works like MacOS and easy to use.
+* `Linux mint` It works like windows and should be use by new corners
+* `Debian` It provide stability but not recommended to a new user.
+* `Fedora` It is a community-based project by Redhat. It uses dnf package manager.
 
 ###  8.What does a systemd. unit (5) means?
 A unit configuration file whose name ends in “. service" encodes information about a process controlled and supervised by systemd. systemd.exec(5) define the execution environment the commands are executed in, and in systemd.kill(5), which define the way the processes of the service are terminated, and in systemd.resource-control(5), which configure resource control settings for the processes of the service.
@@ -63,10 +63,10 @@ Uname command: the uname command is commonly used to determine the process archi
 squashfs file system is a read only file system that lets us compress whole file systems or single directories. We can write them to other devices/partitioned or to ordinary files and then we can mount them directly (if it is a device) or using a loopback device (if it is a file).
 
 ### 11.What are /dev/loop and /dev/tty?
-The “/dev/loop” devices treat files with a filesystem image as if they were block devices. The loop devices are snaps because snap packages are created that way.
+The `/dev/loop` devices treat files with a filesystem image as if they were block devices. The loop devices are snaps because snap packages are created that way.
 These files were containing a filesystem that is mounted to the location. It is an approach that developers use to pack an entire package in a single file, but the operating system access all the files. The approach used here is therefore known as loop mounts.
 
-/dev/tty stands for the controlling terminal (if any) for the current process. To find out which tty's are attached to which processes we use the "ps -a" command at the shell prompt (command line).
+`/dev/tty` stands for the controlling terminal (if any) for the current process. To find out which tty's are attached to which processes we use the "ps -a" command at the shell prompt (command line).
 
 ### 12.What are Linux Signals?
 Signals are software interrupts sent to a program to indicate that an important event has occurred. The events can vary from user requests to illegal memory access errors. Some signals, such as the interrupt signal, indicate that a user has asked the program to do something that is not in the usual flow of control.
@@ -78,13 +78,13 @@ Hidden files are used for storage of user preferences or for preservation of the
 ext4 file system is faster among all the ext. file system. The ext4 filesystem is also capable of performing faster file system checks than other equivalent journaling filesystems.
 
 ### 15.What is swap & swap memory?
-Swap is a space on a disk that is used when the amount of physical RAM memory is full. When a Linux system runs out of RAM, inactive pages are moved from the RAM to the swap space.
+`Swap` is a space on a disk that is used when the amount of physical RAM memory is full. When a Linux system runs out of RAM, inactive pages are moved from the RAM to the swap space.
 
-swap memory is the dedicated amount of hard drive that is used whenever RAM runs out of memory. There is a memory management program in Linux that takes care of this process. Whenever RAM is short of memory, the memory management program looks for all those inactive blocks of data present in RAM that have not been used for a long time.
+`Swap memory` is the dedicated amount of hard drive that is used whenever RAM runs out of memory. There is a memory management program in Linux that takes care of this process. Whenever RAM is short of memory, the memory management program looks for all those inactive blocks of data present in RAM that have not been used for a long time.
 
 ### 16.How to mount a file system?
 On Linux operating systems, you can use the mount command to attach (mount) file systems and removable devices such as USB flash drives at a particular mount point in the directory tree. When used without any argument, the mount command will display all currently attached file systems:
-$mount 
+* `$mount`
 By default, the output will include all file systems including the virtual ones such as cgroup, sysfs, and others. Each line contains information about the device name, the directory to which the device is mounted to, the type of the filesystem and the mount options in the following form:
 Device_name on directory type filesystem_type(options)
 
@@ -102,9 +102,8 @@ Unix time sharing allows a single system to appear to have a different host and 
 control group allow to relocate the resources such as CPU time, system memory, network bandwidth.
 
 ### 21.What is the difference between sbin & usr/sbin?
-/sbin, as distinct from /bin, is for system management programs (not normally used by ordinary users) needed before /usr is mounted.
-
-/usr/sbin is a subdirectory of /usr, which is used to store many application programs. Another subdirectory of /usr, /usr/bin, contains programs that are not required for booting or repairing the system. The directory /usr/local/sbin is used for locally installed system administration programs.
+* `/sbin` as distinct from /bin, is for system management programs (not normally used by ordinary users) needed before /usr is mounted.
+* `/usr/sbin` is a subdirectory of /usr, which is used to store many application programs. Another subdirectory of /usr, /usr/bin, contains programs that are not required for booting or repairing the system. The directory /usr/local/sbin is used for locally installed system administration programs.
 
 ### 22.Examples of awk, grep and sed
 AWK:It is a utility that enable a programmer to write small but efficient code in the form of statement that define the text pattern.
@@ -142,15 +141,15 @@ $ sed -n 22,29p testfile.txt.
 
 ### 23.How many tables are there in iptables?
 There are 5 tables in iptables:
-•	Filter: It works as the bouncer and determine who gets out and in of our network.
+* `Filter` It works as the bouncer and determine who gets out and in of our network.
 
-•	Nat: it stands for Network Address Translation. It includes rules of NAT to route packet to the network that cannot be directly accessible. If the source or destination of a packet has to be modified then NAT table will be used.
+* `Nat` it stands for Network Address Translation. It includes rules of NAT to route packet to the network that cannot be directly accessible. If the source or destination of a packet has to be modified then NAT table will be used.
 
-•	Mangle: this table is used for adjusting the packet’s IP header properties. It contains following chain Forward, input, output, past-routing, pre-routing.
+*	`Mangle` this table is used for adjusting the packet’s IP header properties. It contains following chain Forward, input, output, past-routing, pre-routing.
 
-•	Raw: this table is used for exempting packets through connection tracking. It contains two chains: pre-routing and output.
+*	`Raw` this table is used for exempting packets through connection tracking. It contains two chains: pre-routing and output.
 
-•	Security: It is used for managing unique access rule.It contains forward, input and output chains.
+* `Security` It is used for managing unique access rule.It contains forward, input and output chains.
 
 ### 24.What is prot, opt, in, out, source & destination?
 prot: Protocol, tcp, udp, icmp etc.
