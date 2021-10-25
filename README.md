@@ -192,12 +192,12 @@ $ iptables-s save >/etc/network/iptables.rules
 |It provides a framework for managing net filter as well as a command line interface for manipulating the firewall.| Iptables is a tool for managing firewall rule on a Linux machine. |
  
 ### 31.What are public & private keys?
-In public key, two keys are used. One key is used for encryption and another key is used for decryption.
+In `public` key, two keys are used. One key is used for encryption and another key is used for decryption.
 
-In private key, same key is used for encryption and decryption.
+In `private` key, same key is used for encryption and decryption.
 
 ### 32.How does ssh work?
-ssh stands for secure shell is a network communication protocol that enables two computers to communicate. Ssh is also used to securely log into the remote operating system.
+`ssh` stands for secure shell is a network communication protocol that enables two computers to communicate. Ssh is also used to securely log into the remote operating system.
 Ssh work on a client/server model where the ssh client is the system that require remote access and the ssh secure provide it. Therefore, creating a secure channel by the use of secure shell key.
 
 ### 33.What is the difference between HTTP & HTTPS.
@@ -209,11 +209,11 @@ Ssh work on a client/server model where the ssh client is the system that requir
 | Use port no 80 for communication. |Use port no 443 for communication. |
 
 ### 34.What is SSL?
-SSL stands for Secure Socket Layer. It is a protocol for establishing secure links between networked computer. It is a security protocol that creates an encrypted link between a web server and a web browser.
+`SSL` stands for Secure Socket Layer. It is a protocol for establishing secure links between networked computer. It is a security protocol that creates an encrypted link between a web server and a web browser.
 
 ### 35.What is the difference between apt update & apt upgrade.
-apt update is used to update all the package list.
-Apt upgrade is used to update all the installed software to the latest version.
+`Apt update` is used to update all the package list.
+`Apt upgrade` is used to update all the installed software to the latest version.
 
 ### 36.What do repositories contain in a Linux system?
 A Linux repository is a storage location from which your system retrieves and installs OS updates and applications. Each repository is a collection of software hosted on a remote server and intended to be used for installing and updating software packages on Linux systems.
@@ -221,13 +221,18 @@ A Linux repository is a storage location from which your system retrieves and in
 ### 37.What are the package managers used in Linux?
 Package manager is a tool that allow users to install, remove, upgrade, configure and manage software package on an operating system.
 
+In Linux, we have two types of package manager.
+`Low level package manager` They are only responsible for installing the application and not the dependencies. e.g. dpkg,rpm
+
+`High level package manager` They resolve the dependencies & meta data searching. e.g.apt
+
 ### 38.What does the number represent after the file permissions?
-The number we mentioned is the number of hard links to a file. It always at least 1 (itself).
+It denotes the number of files contained in that particular directory.
 
 ### 39.What is the difference between apt and apt-get?
-Apt is a command line utility for installing, updating, and removing deb package.
+`Apt` is a command line utility for installing, updating, and removing deb package.
 
-Apt-get is a cli package manager tool i.e., widely used on Debian based system. It allows us to install, update and remove package.
+`Apt-get` is a cli package manager tool i.e., widely used on Debian based system. It allows us to install, update and remove package.
 
 ### 40.How can I give access to someone to my AWS instance?
 Add a new user to the EC2 Linux instance
@@ -248,7 +253,7 @@ A daemon (also known as background processes) is a Linux or UNIX program that ru
 `.pem` file are a type of public key infrastructure file used for key and certificate. They are used to store SSL certificate and their associate private key.When a .pem file gets deleted then we won’t be able to connect to your instance because it requires pem file. But we can gain access again by creating a new instance. We can create a new instance with the same key pair and we can access our AWS instance.
 
 ### 44.What information is stored in the /etc/host file?
-The /etc/hosts file contains the Internet Protocol (IP) host names and addresses for the local host and other hosts in the Internet network. This file is used to resolve a name into an address (that is, to translate a host name into its Internet address).
+The `/etc/hosts` file contains the Internet Protocol (IP) host names and addresses for the local host and other hosts in the Internet network. This file is used to resolve a name into an address (that is, to translate a host name into its Internet address).
 
 ### 45.What is SCP & what does this command do?
 SCP stands for secure copy. It is used to copy file between server in a secure way. It allows the local host and the remote host or between two remote host.
@@ -256,13 +261,16 @@ SCP stands for secure copy. It is used to copy file between server in a secure w
 ### 46.How port forwarding works?
 Port forwarding is an application of network address translation (NAT) that redirects a communication request from one address and port number combination to another while the packets are traversing a network gateway, such as a router or firewall.
 It is a mechanism in ssh for tunnelling application port from client machine to a server machine or vice-versa.
+
 `Local port-forwarding` connection from ssh client are forwarded through the ssh server to a destination server.
+
 `Remote port-forwarding` connection from ssh server are forwarded through the ssh client to a destination server.
 
 `ssh -L local_port:destination_server_ip:remote_port ssh_server_hostname`
 
 ### 47.How can we connect without IP to AWS instance?
 We will add the public IP of master & slave instances with in host file of local system. Then we can connect with the instances using ssh keyword.
+
 `ssh -i "AWS-Key-Jenkins.pem: ubuntu@master`
 
 ### 48.What is an ssh agent?
