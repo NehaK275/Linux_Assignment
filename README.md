@@ -19,19 +19,19 @@ UEFI is the short form of Unified Extensible Firmware Interface. In simple words
 
 Security benefits of UEFI:
 
-•	Device guard
+*	Device guard
 
-•	Credential guard
+*	Credential guard
 
-•	Biometric authentication
+*	Biometric authentication
 
-•	Faster start-up times
+*	Faster start-up times
 
-•	Faster shutdown times
+*	Faster shutdown times
 
-•	Faster sleep times
+*	Faster sleep times
 
-•	Faster resuming times
+*	Faster resuming times
 
 ### 5.What is the difference between BIOS & UEFI?
 |BIOS | UEFI |
@@ -54,6 +54,7 @@ various Linux distributions are:
 
 ###  8.What does a systemd. unit (5) means?
 A unit configuration file whose name ends in “. service" encodes information about a process controlled and supervised by systemd. systemd.exec(5) define the execution environment the commands are executed in, and in systemd.kill(5), which define the way the processes of the service are terminated, and in systemd.resource-control(5), which configure resource control settings for the processes of the service.
+
 ### 9.What are Getty commands and Uname command?
 Getty command: the Getty command set and manages terminal lines and ports. This command is run by the init command.
 
@@ -154,11 +155,13 @@ There are 5 tables in iptables:
 ### 24.What is prot, opt, in, out, source & destination?
 * `prot` The protocol for rule.
 * `opt` special options for the specific rule.
-* `Source` source ip-address of the packet.
-* `Destination` destination ip-address for the packet.
+*  `in` Name of input interface via which the packet is received.
+*  `out` Name of output interface via which the packet will be send.
+* `Source` It shows the information of the source of the packet.
+* `Destination` It shows the information regarding the destination of the packet to be reached.
 
 ### 25.Why rules are added to the top?
-To insert a new rule above a specific existing rule, we simply use the index number of that existing rule. For example, to insert a new rule to the top of the chain, we use the command with index number 1. It's also possible to flush all rules of a specific chain or even the whole iptables using the -F -parameter.
+Rules are added to the top of the iptables because it will neglect the rules defined below a particular rule which is defined on the top.
 
 ### 26.What type of rules we can add to the iptables?
 Open the terminal app or login using ssh: ssh user@server-name.
