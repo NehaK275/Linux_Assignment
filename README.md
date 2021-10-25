@@ -84,7 +84,7 @@ ext4 file system is faster among all the ext. file system. The ext4 filesystem i
 
 ### 16.How to mount a file system?
 On Linux operating systems, you can use the mount command to attach (mount) file systems and removable devices such as USB flash drives at a particular mount point in the directory tree. When used without any argument, the mount command will display all currently attached file systems:
-* `$mount`
+ `$mount`
 By default, the output will include all file systems including the virtual ones such as cgroup, sysfs, and others. Each line contains information about the device name, the directory to which the device is mounted to, the type of the filesystem and the mount options in the following form:
 Device_name on directory type filesystem_type(options)
 
@@ -102,8 +102,8 @@ Unix time sharing allows a single system to appear to have a different host and 
 control group allow to relocate the resources such as CPU time, system memory, network bandwidth.
 
 ### 21.What is the difference between sbin & usr/sbin?
-* `/sbin` as distinct from /bin, is for system management programs (not normally used by ordinary users) needed before /usr is mounted.
-* `/usr/sbin` is a subdirectory of /usr, which is used to store many application programs. Another subdirectory of /usr, /usr/bin, contains programs that are not required for booting or repairing the system. The directory /usr/local/sbin is used for locally installed system administration programs.
+ `/sbin` as distinct from /bin, is for system management programs (not normally used by ordinary users) needed before /usr is mounted.
+ `/usr/sbin` is a subdirectory of /usr, which is used to store many application programs. Another subdirectory of /usr, /usr/bin, contains programs that are not required for booting or repairing the system. The directory /usr/local/sbin is used for locally installed system administration programs.
 
 ### 22.Examples of awk, grep and sed
 AWK:It is a utility that enable a programmer to write small but efficient code in the form of statement that define the text pattern.
@@ -130,14 +130,14 @@ satvik director purchase 80000
 
 GREP: It is used to perform text searches for a defined criteria of word or string. It filters searches a file for a particular pattern of character and display all line that contain that pattern.
 Example of grep:
-         Match all lines that start with ‘hello’. E.g.: “hello there”
-              $ grep “^hello” file1
+         `Match all lines that start with ‘hello’. E.g.: “hello there”`
+              `$ grep “^hello” file1`
 
 SED: It perform lot of function on file like searching, find and replace, insertion and deletion. It is used to perform basic text transformation on an input stream. 
 Example of sed:
-Displaying partial text of a file: 
+`Displaying partial text of a file:` 
 With sed, we can view only some part of a file rather than seeing whole file. To see some lines of the file, use the following command,
-$ sed -n 22,29p testfile.txt.
+`$ sed -n 22,29p testfile.txt.`
 
 ### 23.How many tables are there in iptables?
 There are 5 tables in iptables:
