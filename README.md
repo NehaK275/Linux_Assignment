@@ -279,6 +279,22 @@ We will add the public IP of master & slave instances with in host file of local
 `ssh-agent` is a key manager of SSH.It is a program to hold private keys used for public key authentication. Through use of environment variables the agent can be located and automatically used for authentication when logging in to other machines using ssh(1).
 
 ### 49.Create a unit file for any application.
+[Unit]
+Description=nginx server start
+
+[Service]
+Type=forking
+PIDFile=/run/nginx.pid
+WorkingDirectory=/usr/sbin
+ExecStart= /usr/sbin/nginx
+ExecReload= /usr/sbin/nginx -s reload
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp= true
+
+
+[Install]
+WantedBy=multi-user.target
+
 
 ### 50.What is RHEL?
 Red Hat Enterprise Linux (RHEL) is a Linux-based operating system from Red Hat designed for businesses. RHEL can work on desktops, on servers, in hypervisors or in the cloud. Red Hat and its community-supported counterpart, Fedora, are among the most widely used Linux distributions in the world.Red Hat Enterprise Linux has multiple variants, with server versions for x86, x86-64, PowerPC, Itanium and IBM System z. It also includes desktop versions for x86 and x86-64. As of November, 2011, the latest variant of RHEL is RHEL 6.
